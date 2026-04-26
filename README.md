@@ -91,29 +91,13 @@ def divide(a, b):
 ## Architecture
 
 
-┌─────────────────────────────────────┐
-│           BugSlayer UI              │
-│     (CodeMirror + live log)         │
-└────────────────┬────────────────────┘
-│ HTTP POST /debug
-┌────────────────▼────────────────────┐
-│         FastAPI Backend             │
-│      (streaming SSE response)       │
-└────────────────┬────────────────────┘
-│
-┌─────────▼──────────┐
-│    Agentic Loop     │
-│  (loop.py)          │
-└──────┬──────────────┘
-│              │
-┌─────────▼───┐    ┌─────▼────────┐
-│Docker Sandbox│    │  Gemini AI   │
-│ pytest/gtest │    │ 2.5 Flash    │
-│ /junit       │    │              │
-└─────────────┘    └──────────────┘
-
-
-
+| Layer | Technology | Role |
+|---|---|---|
+| UI | Vanilla JS + CodeMirror | Code editor + live agent log |
+| API | FastAPI + SSE | Streaming backend |
+| Agent | Python + Gemini 2.5 Flash | Agentic loop + AI reasoning |
+| Sandbox | Docker | Safe isolated code execution |
+| Test runners | pytest / Google Test / JUnit | Verify fixes actually work |
 
 ## Roadmap
 
