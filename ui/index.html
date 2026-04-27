@@ -227,7 +227,7 @@ async function runDebugger(){
   setStatus('running','running')
   showStopBtn()
   try{
-    const response=await fetch('http://localhost:8000/debug',{
+    const response=await fetch('/debug',{
       method:'POST',
       headers:{'Content-Type':'application/json'},
       body:JSON.stringify({code,test_code:testCode,language:currentLang,max_attempts:5})

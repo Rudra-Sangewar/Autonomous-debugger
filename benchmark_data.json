@@ -1,0 +1,81 @@
+{
+  "total_runs": 158,
+  "successful_fixes": 130,
+  "total_attempts": 291,
+  "total_time_seconds": 905.2,
+  "language_stats": {
+    "python": {
+      "runs": 91,
+      "success": 78,
+      "attempts": 166
+    },
+    "cpp": {
+      "runs": 42,
+      "success": 33,
+      "attempts": 81
+    },
+    "java": {
+      "runs": 25,
+      "success": 19,
+      "attempts": 44
+    }
+  },
+  "recent_runs": [
+    {
+      "language": "python",
+      "success": true,
+      "attempts": 2,
+      "time": 7.6,
+      "timestamp": "2026-04-27"
+    },
+    {
+      "language": "python",
+      "success": true,
+      "attempts": 2,
+      "time": 5.2,
+      "timestamp": "2026-04-27"
+    },
+    {
+      "language": "python",
+      "success": true,
+      "attempts": 2,
+      "time": 5.2,
+      "timestamp": "2026-04-26"
+    },
+    {
+      "language": "cpp",
+      "success": true,
+      "attempts": 3,
+      "time": 8.1,
+      "timestamp": "2026-04-26"
+    },
+    {
+      "language": "python",
+      "success": true,
+      "attempts": 1,
+      "time": 3.4,
+      "timestamp": "2026-04-26"
+    },
+    {
+      "language": "java",
+      "success": false,
+      "attempts": 5,
+      "time": 14.2,
+      "timestamp": "2026-04-25"
+    },
+    {
+      "language": "python",
+      "success": true,
+      "attempts": 2,
+      "time": 6.8,
+      "timestamp": "2026-04-25"
+    },
+    {
+      "language": "cpp",
+      "success": true,
+      "attempts": 1,
+      "time": 4.1,
+      "timestamp": "2026-04-25"
+    }
+  ]
+}

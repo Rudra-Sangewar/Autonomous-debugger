@@ -1,3 +1,5 @@
+from fastapi.staticfiles import StaticFiles
+from fastapi.responses import FileResponse
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import StreamingResponse
@@ -13,6 +15,15 @@ from api.benchmark import get_stats, record_run
 load_dotenv()
 
 app = FastAPI(title="BugSlayer API")
+app.mount("/ui", StaticFiles(directory="ui"), name="ui")
+
+@app.get("/app")
+def serve_app():
+    return FileResponse("ui/index.html")
+
+@app.get("/dashboard")
+def serve_dashboard():
+    return FileResponse("ui/stats.html")
 
 app.add_middleware(
     CORSMiddleware,
