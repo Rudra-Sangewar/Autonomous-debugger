@@ -72,10 +72,22 @@ LATEST ERROR OUTPUT:
 
 Now return the fixed Python code:"""
 
+        models_to_try = ["gemini-2.5-flash", "gemini-2.0-flash-lite", "gemini-2.0-flash"]
+response = None
+for model_name in models_to_try:
+    try:
         response = client.models.generate_content(
-            model="gemini-2.5-flash-lite",
+            model=model_name,
             contents=prompt
         )
+        break
+    except Exception as e:
+        if "429" in str(e):
+            continue
+        raise e
+if response is None:
+    raise Exception("All Gemini models quota exhausted. Try again tomorrow.")
+
         fixed_code = extract_code(response.text)
 
         history.append({
