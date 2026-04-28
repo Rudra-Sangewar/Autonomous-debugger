@@ -1,13 +1,13 @@
 {
-  "total_runs": 163,
-  "successful_fixes": 135,
-  "total_attempts": 298,
-  "total_time_seconds": 942.9000000000001,
+  "total_runs": 164,
+  "successful_fixes": 136,
+  "total_attempts": 299,
+  "total_time_seconds": 943.9000000000001,
   "language_stats": {
     "python": {
-      "runs": 96,
-      "success": 83,
-      "attempts": 173
+      "runs": 97,
+      "success": 84,
+      "attempts": 174
     },
     "cpp": {
       "runs": 42,
@@ -21,6 +21,13 @@
     }
   },
   "recent_runs": [
+    {
+      "language": "python",
+      "success": true,
+      "attempts": 1,
+      "time": 1.0,
+      "timestamp": "2026-04-28"
+    },
     {
       "language": "python",
       "success": true,
